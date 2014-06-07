@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>ShopWrite - Shopping List App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="../bower_components/foundation/css/foundation.css">
+        <link rel="stylesheet" href="../bower_components/foundation/css/normalize.css">
+        <link rel="stylesheet" href="../app/styles/app.css">
+        <!-- Google Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <section id="wrapper">
+            <section id="contentWrapper">
+                <div class="container">
+                    <div class="row">
+                        <header>
+                            <div class="small-5 medium-3 large-3 small-offset-1 medium-offset-3 large-offset-3 columns logo"></div>
+                            <div class="small-3 medium-4 small-offset-4 medium-offset-2 columns addItemBtn"><a href="#" class="addItem"><img src="../app/images/addItem-btn.svg" alt=""></a>
+                            </div>
+                        </header>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div id="writeModule" class="writeWrapper">
+                            <div class="small-12 medium-7 large-7 medium-centered columns">
+                                    <input type="text" id="writeValue" class="writeField">
+                                <a href="#"><img src="../app/images/btn-write.png" alt="" class="writeBtnImg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div id="filterModule" class="filterWrapper">
+                           <div class="switchWrapper">
+                            <div class="switchContainer">
+                              <p class="need">Still need</p>
+                              <div class="switchTrack">
+                                <div class="switchBtn"></div>
+                              </div>
+                              <p class="got">Got it</p>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                      <div id="allItems" class="allItemsWrapper">
+                        <div class="itemWrapper">
+                            <ul class="itemUl">
+                              <li>
+                                <span class="checkedOff"></span>
+                                <p class="listNeed">meat</p>
+                                <span class="delete"></span>
+                              </li>
+                              <li>
+                                <span class="checkedOff"></span>
+                                <p class="listGot">cheese</p>
+                                <span class="delete"></span>
+                              </li>
+                              <li>
+                                <span class="checkedOn"></span>
+                                <p class="listGot">cheese</p>
+                                <span class="delete"></span>
+                              </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+            </section>
+        </section>
+        <section id="footer_wrapper">
+            <footer></footer>
+        </section>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            // e.src='//www.google-analytics.com/analytics.js';
+            // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            // ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        <script src="../bower_components/foundation/js/foundation.min.js"></script>
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

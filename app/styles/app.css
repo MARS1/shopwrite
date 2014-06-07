@@ -1,0 +1,247 @@
+/* 0, 640px */
+/* 641px, 1024px */
+/* 1025px, 1440px */
+/* 1441px, 1920px */
+/* 1921px */
+/* apply a natural box layout model to all elements */
+/* line 2, ../../sass/partials/_base.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Required to make the page 100% of window size. */
+/* line 7, ../../sass/partials/_base.scss */
+html, body {
+  height: 100%;
+}
+
+/* Not required but does remove normal browser margin/padding */
+/* line 11, ../../sass/partials/_base.scss */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*The main container need sto be 100% high.
+The reason for multiple height calls is for various browser support. */
+/* line 17, ../../sass/partials/_base.scss */
+section#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /*Here we set negative bottom margin based on height of the footer */
+  margin: 0px 0px -41px 0px;
+}
+
+/*Set height of footer wrapper */
+/* line 25, ../../sass/partials/_base.scss */
+section#footer_wrapper {
+  height: 41px;
+}
+
+/*It is necessary to add bottom padding to the last element/container within the main content section equal to the height of the footer so the footer doesn't come up and over content. */
+/* line 29, ../../sass/partials/_base.scss */
+section#content_wrapper {
+  padding: 0px 0px 41px 0px;
+}
+
+@media only screen {
+  /* line 1, ../../sass/partials/_small-up.scss */
+  body {
+    background: #0ab68f;
+    background-image: url("../images/headerBg.png");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
+
+  /* line 8, ../../sass/partials/_small-up.scss */
+  header {
+    height: 122px;
+  }
+  /* line 10, ../../sass/partials/_small-up.scss */
+  header div.logo {
+    position: relative;
+    top: 20px;
+    background: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 75px;
+    width: 126px;
+    margin-top: 10px;
+  }
+  /* line 21, ../../sass/partials/_small-up.scss */
+  header h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  /* line 26, ../../sass/partials/_small-up.scss */
+  header a.addItem {
+    width: 46px;
+    height: 46px;
+    padding: 10px;
+  }
+  /* line 32, ../../sass/partials/_small-up.scss */
+  header .addItemBtn {
+    margin-top: 40px;
+  }
+
+  /* line 37, ../../sass/partials/_small-up.scss */
+  div.writeWrapper {
+    padding-top: 28px;
+    margin-bottom: 28px;
+    height: 200px;
+    width: 100%;
+  }
+  /* line 42, ../../sass/partials/_small-up.scss */
+  div.writeWrapper input.writeField {
+    display: block;
+    margin: auto;
+    height: 84px;
+    width: 80%;
+    padding: 0 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 2px #05654f;
+    color: white;
+    box-shadow: -1px -1px 1px 0px #05654f;
+    background: none;
+    background: url("../images/formField-bg.png");
+    background-repeat: repeat-x;
+    border-radius: 9px;
+    border: none;
+    background-color: none;
+  }
+  /* line 61, ../../sass/partials/_small-up.scss */
+  div.writeWrapper img.writeBtnImg {
+    width: 253px;
+    display: block;
+    margin: 30px auto 0;
+  }
+
+  /* line 68, ../../sass/partials/_small-up.scss */
+  div.filterWrapper {
+    height: 79px;
+    width: 100%;
+  }
+  /* line 71, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 79px;
+    padding: 25px 0 0 0;
+    background: #4a4a4a;
+    box-shadow: 0px -1px 2px #313030;
+  }
+  /* line 79, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper div.switchContainer {
+    width: 320px;
+    display: block;
+    margin: auto;
+  }
+  /* line 83, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper div.switchContainer p.base, div.filterWrapper div.switchWrapper div.switchContainer p.need, div.filterWrapper div.switchWrapper div.switchContainer p.got {
+    font-size: 1.25em;
+    font-weight: bold;
+    float: left;
+    text-align: center;
+  }
+  /* line 89, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper div.switchContainer p.need {
+    color: white;
+  }
+  /* line 93, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper div.switchContainer p.got {
+    color: #ffff0b;
+  }
+  /* line 98, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper div.switchContainer div.switchBtn {
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    background: url("../images/switch-btn.png");
+    background-repeat: none;
+    width: 46px;
+    height: 49px;
+  }
+  /* line 107, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper div.switchContainer div.switchTrack {
+    float: left;
+    position: relative;
+    background: url("../images/switch-track.png");
+    background-repeat: no-repeat;
+    width: 91px;
+    height: 39px;
+    margin: 0 40px;
+    top: -5px;
+  }
+
+  /* line 122, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper {
+    display: block;
+    margin: auto;
+    width: 320px;
+    border-left: 1px solid #0c9e87;
+    border-right: 1px solid #0c9e87;
+  }
+  /* line 128, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 132, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl li {
+    height: 100px;
+    width: 320px;
+    padding: 20px;
+    border-bottom: 1px solid #109980;
+    box-shadow: 0px 1px 0px 0px #48eac6;
+  }
+  /* line 139, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl span.base, div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOff, div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOn, div.allItemsWrapper div.itemWrapper ul.itemUl span.delete {
+    width: 44px;
+    height: 44px;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+  }
+  /* line 145, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOff {
+    float: left;
+    background: url("../images/icons/icon-checkOff.png");
+    background-size: 100%;
+  }
+  /* line 151, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOn {
+    float: left;
+    background: url("../images/icons/icon-checkOn.png");
+    background-size: 100%;
+  }
+  /* line 157, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl span.delete {
+    float: right;
+    background: url("../images/icons/icon-delete.png");
+    background-size: 100%;
+  }
+  /* line 163, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl p.listBase, div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed, div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
+    float: left;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: left;
+    padding: 12px 0 0 20px;
+  }
+  /* line 170, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed {
+    color: white;
+    text-shadow: 1px 1px 1px #05654f;
+  }
+  /* line 175, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
+    color: #1b3b33;
+    text-decoration: line-through;
+  }
+}
