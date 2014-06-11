@@ -1,27 +1,38 @@
 $(document).ready(function(){
+
 	$('#writeModule').hide();
-	$('.addItemBtn').click(function(){
+	$('#addItemBtn').on('click', function() {
 		$('#writeModule').slideDown();
 	})
-	$('#writeBtn').on('click', function(){
+	$('#writeModule').on('click', function(){
 		$(this).setTimeout(function(){
-			$('#writeModule').slideUp();
-		}, 7000);
+			$(this).slideUp();
+		},7000);
 	});
-	$('ul.itemUl li').on('click', 'span', function(){
-		if ($('this.checkedOff')) {
-			$(this).removeClass('checkedOff').addClass('checkedOn');
+	// Trying to target li's inside of itemUl to set an event to be tiggered when the li is clicked I want the styles on the span and p tags to change when the li is clicked.
+	$('span.checkedOff').on('click', function(){
+		if($('span.checkedOff')) {
+			$(this).removeClass('checkedOff').addClass('checkedOn').child;
 			$(this).removeClass('listNeed').addClass('listGot');
 		}
 	});
-	// if user clicks on write button without entering content wait 7 seconds before closing writeModule
-	// else post to list
+	// Toggle Switch functions
+	var switchBtn = $('.switchBtn');
+	var switchTrack = $('.switchTrack');
+	$('p.need').on('click', function(){
+		switchBtn.css('left', '0');
+	})
+	$('p.got').on('click',function(){
+		switchBtn.css('left','49px');
+	})
+	// When write button is clicked item is added to menu list
 
-	// All posted list items start in default 'still need' mode and is prepended to the list of other previous still needed items. These items as a groupd (of still needed items) they are sorted together in the list
-	//
-	// Toggle event for the switch from Still need to Got it
-	// When Got it is toggled all the items that have been checked out need to rise to the top of the list. All list items with the class of checked will be a part of this list and will be placed first before the still needed list items.
-	// When an unchecked list item row is clicked the list item is given the class of checked
-	// When delete is checked remove the item from the list
+	// Switch toggle needs to have additional interactions, click and drag slider button and press on opposite ends of the track to move it as well as give it a smoother transition effect.
+
+	// Delete button to remove list item
+
+	// List item will have to toggle from got to need state (on/off state) when the li is clicked but they should also be adding and removing an attribute to class the sorting
+
+	//  The sorting for the Still need and Got it need to bring filtered list items to the top. Example would be all items with the Got attribute will be pulled to the top or prepended.
 });
 
