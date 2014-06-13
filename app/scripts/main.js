@@ -29,13 +29,6 @@ $(document).ready(function(){
 	$('#itemWrapper span').on('click', function(){
 		$(this).toggleClass('checkedOff checkedOn').siblings('p').toggleClass('listNeed listGot');
 	});
-
-	// $('span.checkedOff').on('click', function(){
-	// 	if($('span.checkedOff')) {
-	// 		$(this).removeClass('checkedOff').addClass('checkedOn').child;
-	// 		$(this).removeClass('listNeed').addClass('listGot');
-	// 	}
-	// });
 	// Toggle Switch functions
 	var switchBtn = $('.switchBtn');
 	var switchTrack = $('.switchTrack');
@@ -49,14 +42,30 @@ $(document).ready(function(){
 		switchBtn.addClass('switchToggleRt');
 	})
 
+	var $gotIt = 'gotIt'
 	$('span').on('click', function(){
 		$(this).closest('span').toggleClass('checkedOn').siblings('p').toggleClass('listGot');
+		$(this).parent('li').attr('gotIt');
 	});
+	// Delete button to remove list item
+	var $li = $('li');
+	$('span.delete').on('click', function(){
+		$(this).parent('li').remove('li');
+	})
 	// When write button is clicked item is added to menu list
+	var $btn = $('#writeBtn');
+	var $value = $('#writeValue').val();
+	var $listItem = '<li attr="stillNeed"><span class="checkedOff"></span><p class="listNeed">' + $value + '</p><span class="delete"></span></li>';
+	$btn.on('click', function(){
+		event.preventDefault();
+		if($value.length > 0) {
+			$('ul itemUl > li').prepend($listItem);
+		}
+	})
+
 
 	// Switch toggle needs to have additional interactions, click and drag slider button and press on opposite ends of the track to move it as well as give it a smoother transition effect.
 
-	// Delete button to remove list item
 
 	// List item will have to toggle from got to need state (on/off state) when the li is clicked but they should also be adding and removing an attribute to class the sorting
 
