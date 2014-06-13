@@ -158,16 +158,25 @@ section#content_wrapper {
     color: #ffff0b;
   }
   /* line 98, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper div.switchContainer .switchToggleLft {
+    left: 0px;
+    transition: 0.5s ease-in-out;
+  }
+  /* line 102, ../../sass/partials/_small-up.scss */
+  div.filterWrapper div.switchWrapper div.switchContainer .switchToggleRt {
+    left: 49px;
+    transition: 0.5s ease-in;
+  }
+  /* line 106, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer div.switchBtn {
     position: absolute;
     top: -2px;
-    left: 0px;
     background: url("../images/switch-btn.png");
     background-repeat: none;
     width: 46px;
     height: 49px;
   }
-  /* line 107, ../../sass/partials/_small-up.scss */
+  /* line 114, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer div.switchTrack {
     float: left;
     position: relative;
@@ -179,7 +188,7 @@ section#content_wrapper {
     top: -5px;
   }
 
-  /* line 122, ../../sass/partials/_small-up.scss */
+  /* line 129, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper {
     display: block;
     margin: auto;
@@ -187,13 +196,13 @@ section#content_wrapper {
     border-left: 1px solid #0c9e87;
     border-right: 1px solid #0c9e87;
   }
-  /* line 128, ../../sass/partials/_small-up.scss */
+  /* line 135, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 132, ../../sass/partials/_small-up.scss */
+  /* line 139, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl li {
     height: 100px;
     width: 320px;
@@ -201,32 +210,32 @@ section#content_wrapper {
     border-bottom: 1px solid #109980;
     box-shadow: 0px 1px 0px 0px #48eac6;
   }
-  /* line 139, ../../sass/partials/_small-up.scss */
+  /* line 146, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl span.base, div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOff, div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOn, div.allItemsWrapper div.itemWrapper ul.itemUl span.delete {
     width: 44px;
     height: 44px;
     margin-top: 10px;
     background-repeat: no-repeat;
   }
-  /* line 145, ../../sass/partials/_small-up.scss */
+  /* line 152, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOff {
     float: left;
     background: url("../images/icons/icon-checkOff.png");
     background-size: 100%;
   }
-  /* line 151, ../../sass/partials/_small-up.scss */
+  /* line 158, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOn {
     float: left;
     background: url("../images/icons/icon-checkOn.png");
     background-size: 100%;
   }
-  /* line 157, ../../sass/partials/_small-up.scss */
+  /* line 164, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl span.delete {
     float: right;
     background: url("../images/icons/icon-delete.png");
     background-size: 100%;
   }
-  /* line 163, ../../sass/partials/_small-up.scss */
+  /* line 170, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listBase, div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed, div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
     float: left;
     font-size: 1.25em;
@@ -234,12 +243,12 @@ section#content_wrapper {
     text-align: left;
     padding: 12px 0 0 20px;
   }
-  /* line 170, ../../sass/partials/_small-up.scss */
+  /* line 177, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed {
     color: white;
     text-shadow: 1px 1px 1px #05654f;
   }
-  /* line 175, ../../sass/partials/_small-up.scss */
+  /* line 182, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
     color: #1b3b33;
     text-decoration: line-through;

@@ -1,30 +1,57 @@
+var timer;
+
+function slideDownTimeout() {
+	timeout = setTimeout(function(){
+		$('.writeModule').slideUp();
+	}, 2000);
+}
+
 $(document).ready(function(){
 
 	$('#writeModule').hide();
 	$('#addItemBtn').on('click', function() {
 		$('#writeModule').slideDown();
-	})
-	$('#writeModule').on('click', function(){
-		$(this).setTimeout(function(){
-			$(this).slideUp();
-		},7000);
+		slideDownTimeout();
 	});
+	$('#writeModule input').keydown(function(){
+		console.log('keyup');
+		clearTimeout(timeout);
+		slideDownTimeout();
+	});
+	// $('#writeBtn').on('click', function(){
+	// 	setTimeout(function(){
+	// 		$('writeModule').slideUp();
+	// 	},7000);
+	// });
 	// Trying to target li's inside of itemUl to set an event to be tiggered when the li is clicked I want the styles on the span and p tags to change when the li is clicked.
-	$('span.checkedOff').on('click', function(){
-		if($('span.checkedOff')) {
-			$(this).removeClass('checkedOff').addClass('checkedOn').child;
-			$(this).removeClass('listNeed').addClass('listGot');
-		}
+	// Checking list items off
+
+	$('#itemWrapper span').on('click', function(){
+		$(this).toggleClass('checkedOff checkedOn').siblings('p').toggleClass('listNeed listGot');
 	});
+
+	// $('span.checkedOff').on('click', function(){
+	// 	if($('span.checkedOff')) {
+	// 		$(this).removeClass('checkedOff').addClass('checkedOn').child;
+	// 		$(this).removeClass('listNeed').addClass('listGot');
+	// 	}
+	// });
 	// Toggle Switch functions
 	var switchBtn = $('.switchBtn');
 	var switchTrack = $('.switchTrack');
-	$('p.need').on('click', function(){
-		switchBtn.css('left', '0');
+	$('.switchTrack').on('click', function(){
+		switchBtn.toggleClass('switchToggleRt');
+	})
+	$('p.need').on('click',function(){
+		switchBtn.toggleClass('switchToggleLft');
 	})
 	$('p.got').on('click',function(){
-		switchBtn.css('left','49px');
+		switchBtn.addClass('switchToggleRt');
 	})
+
+	$('span').on('click', function(){
+		$(this).closest('span').toggleClass('checkedOn').siblings('p').toggleClass('listGot');
+	});
 	// When write button is clicked item is added to menu list
 
 	// Switch toggle needs to have additional interactions, click and drag slider button and press on opposite ends of the track to move it as well as give it a smoother transition effect.
