@@ -2,7 +2,7 @@ var timer;
 
 function slideDownTimeout() {
 	timeout = setTimeout(function(){
-		$('.writeModule').slideUp();
+		$('#writeModule').slideUp();
 	}, 2000);
 }
 
@@ -33,7 +33,7 @@ $(document).ready(function(){
 	var switchBtn = $('.switchBtn');
 	var switchTrack = $('.switchTrack');
 	$('.switchTrack').on('click', function(){
-		switchBtn.toggleClass('switchToggleRt');
+		switchBtn.toggleClass('switchToggleRt switchToggleLft');
 	})
 	$('p.need').on('click',function(){
 		switchBtn.toggleClass('switchToggleLft');
