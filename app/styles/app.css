@@ -167,6 +167,9 @@ section#content_wrapper {
     width: 46px;
     height: 49px;
   }
+div.filterWrapper div.switchWrapper div.switchContainer div.switchBtn.clicked{
+    left: 49px;
+}
   /* line 107, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer div.switchTrack {
     float: left;
@@ -245,3 +248,4 @@ section#content_wrapper {
     text-decoration: line-through;
   }
 }
+
