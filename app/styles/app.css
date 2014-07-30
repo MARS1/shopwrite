@@ -242,15 +242,33 @@ section#content_wrapper {
     font-weight: bold;
     text-align: left;
     padding: 12px 0 0 20px;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  /* line 178, ../../sass/partials/_small-up.scss */
+  /* line 181, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed {
     color: white;
     text-shadow: 1px 1px 1px #05654f;
   }
-  /* line 183, ../../sass/partials/_small-up.scss */
+  /* line 186, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
     color: #1b3b33;
     text-decoration: line-through;
+  }
+
+  /* line 195, ../../sass/partials/_small-up.scss */
+  .right {
+    left: 49px;
+  }
+
+  /* line 199, ../../sass/partials/_small-up.scss */
+  .left {
+    left: 0px;
+  }
+
+  /* line 203, ../../sass/partials/_small-up.scss */
+  .clicked {
+    left: 49px;
   }
 }
