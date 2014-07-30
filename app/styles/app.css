@@ -59,42 +59,50 @@ section#content_wrapper {
   /* line 8, ../../sass/partials/_small-up.scss */
   header {
     height: 122px;
+    width: 340px;
+    display: block;
+    margin: 0 auto;
   }
-  /* line 10, ../../sass/partials/_small-up.scss */
+  /* line 13, ../../sass/partials/_small-up.scss */
   header div.logo {
     position: relative;
     top: 20px;
+    left: 10px;
     background: url("../images/logo.png");
     background-repeat: no-repeat;
     background-size: 100%;
     height: 75px;
     width: 126px;
-    margin-top: 10px;
+    margin: 0;
+    padding: 0;
+    float: left;
   }
-  /* line 21, ../../sass/partials/_small-up.scss */
+  /* line 27, ../../sass/partials/_small-up.scss */
   header h1 {
     font-size: 2em;
     font-weight: bold;
   }
-  /* line 26, ../../sass/partials/_small-up.scss */
+  /* line 32, ../../sass/partials/_small-up.scss */
   header a.addItem {
     width: 46px;
     height: 46px;
     padding: 10px;
   }
-  /* line 32, ../../sass/partials/_small-up.scss */
+  /* line 38, ../../sass/partials/_small-up.scss */
   header .addItemBtn {
     margin-top: 40px;
+    float: right;
+    width: 70px;
   }
 
-  /* line 38, ../../sass/partials/_small-up.scss */
+  /* line 46, ../../sass/partials/_small-up.scss */
   div.writeWrapper {
     padding-top: 28px;
     margin-bottom: 28px;
     height: 200px;
     width: 100%;
   }
-  /* line 43, ../../sass/partials/_small-up.scss */
+  /* line 51, ../../sass/partials/_small-up.scss */
   div.writeWrapper input.writeField {
     display: block;
     margin: auto;
@@ -114,19 +122,19 @@ section#content_wrapper {
     border: none;
     background-color: none;
   }
-  /* line 62, ../../sass/partials/_small-up.scss */
+  /* line 70, ../../sass/partials/_small-up.scss */
   div.writeWrapper img.writeBtnImg {
     width: 253px;
     display: block;
     margin: 30px auto 0;
   }
 
-  /* line 69, ../../sass/partials/_small-up.scss */
+  /* line 77, ../../sass/partials/_small-up.scss */
   div.filterWrapper {
     height: 79px;
     width: 100%;
   }
-  /* line 72, ../../sass/partials/_small-up.scss */
+  /* line 80, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper {
     display: block;
     margin: auto;
@@ -136,38 +144,38 @@ section#content_wrapper {
     background: #4a4a4a;
     box-shadow: 0px -1px 2px #313030;
   }
-  /* line 80, ../../sass/partials/_small-up.scss */
+  /* line 88, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer {
     width: 320px;
     display: block;
     margin: auto;
   }
-  /* line 84, ../../sass/partials/_small-up.scss */
+  /* line 92, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer p.base, div.filterWrapper div.switchWrapper div.switchContainer p.need, div.filterWrapper div.switchWrapper div.switchContainer p.got {
     font-size: 1.25em;
     font-weight: bold;
     float: left;
     text-align: center;
   }
-  /* line 90, ../../sass/partials/_small-up.scss */
+  /* line 98, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer p.need {
     color: white;
   }
-  /* line 94, ../../sass/partials/_small-up.scss */
+  /* line 102, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer p.got {
     color: #ffff0b;
   }
-  /* line 99, ../../sass/partials/_small-up.scss */
+  /* line 107, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer .switchToggleLft {
     left: 0px;
     transition: 0.5s ease-in-out;
   }
-  /* line 103, ../../sass/partials/_small-up.scss */
+  /* line 111, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer .switchToggleRt {
     left: 49px;
     transition: 0.5s ease-in;
   }
-  /* line 107, ../../sass/partials/_small-up.scss */
+  /* line 115, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer div.switchBtn {
     position: absolute;
     top: -2px;
@@ -176,7 +184,7 @@ section#content_wrapper {
     width: 46px;
     height: 49px;
   }
-  /* line 115, ../../sass/partials/_small-up.scss */
+  /* line 123, ../../sass/partials/_small-up.scss */
   div.filterWrapper div.switchWrapper div.switchContainer div.switchTrack {
     float: left;
     position: relative;
@@ -188,7 +196,7 @@ section#content_wrapper {
     top: -5px;
   }
 
-  /* line 130, ../../sass/partials/_small-up.scss */
+  /* line 138, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper {
     display: block;
     margin: auto;
@@ -196,13 +204,13 @@ section#content_wrapper {
     border-left: 1px solid #0c9e87;
     border-right: 1px solid #0c9e87;
   }
-  /* line 136, ../../sass/partials/_small-up.scss */
+  /* line 144, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 140, ../../sass/partials/_small-up.scss */
+  /* line 148, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl li {
     height: 100px;
     width: 320px;
@@ -210,32 +218,32 @@ section#content_wrapper {
     border-bottom: 1px solid #109980;
     box-shadow: 0px 1px 0px 0px #48eac6;
   }
-  /* line 147, ../../sass/partials/_small-up.scss */
+  /* line 155, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl span.base, div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOff, div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOn, div.allItemsWrapper div.itemWrapper ul.itemUl span.delete {
     width: 44px;
     height: 44px;
     margin-top: 10px;
     background-repeat: no-repeat;
   }
-  /* line 153, ../../sass/partials/_small-up.scss */
+  /* line 161, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOff {
     float: left;
     background: url("../images/icons/icon-checkOff.png");
     background-size: 100%;
   }
-  /* line 159, ../../sass/partials/_small-up.scss */
+  /* line 167, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOn {
     float: left;
     background: url("../images/icons/icon-checkOn.png");
     background-size: 100%;
   }
-  /* line 165, ../../sass/partials/_small-up.scss */
+  /* line 173, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl span.delete {
     float: right;
     background: url("../images/icons/icon-delete.png");
     background-size: 100%;
   }
-  /* line 171, ../../sass/partials/_small-up.scss */
+  /* line 179, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listBase, div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed, div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
     float: left;
     font-size: 1.25em;
@@ -246,28 +254,28 @@ section#content_wrapper {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /* line 181, ../../sass/partials/_small-up.scss */
+  /* line 189, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed {
     color: white;
     text-shadow: 1px 1px 1px #05654f;
   }
-  /* line 186, ../../sass/partials/_small-up.scss */
+  /* line 194, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
     color: #1b3b33;
     text-decoration: line-through;
   }
 
-  /* line 195, ../../sass/partials/_small-up.scss */
+  /* line 203, ../../sass/partials/_small-up.scss */
   .right {
     left: 49px;
   }
 
-  /* line 199, ../../sass/partials/_small-up.scss */
+  /* line 207, ../../sass/partials/_small-up.scss */
   .left {
     left: 0px;
   }
 
-  /* line 203, ../../sass/partials/_small-up.scss */
+  /* line 211, ../../sass/partials/_small-up.scss */
   .clicked {
     left: 49px;
   }
