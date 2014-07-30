@@ -90,7 +90,7 @@ section#content_wrapper {
   }
   /* line 38, ../../sass/partials/_small-up.scss */
   header .addItemBtn {
-    margin-top: 40px;
+    margin: 40px 20px 0 0;
     float: right;
     width: 70px;
   }
