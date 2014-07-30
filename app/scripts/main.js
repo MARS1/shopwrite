@@ -6,7 +6,7 @@ function slideDownTimeout(){
         if($('#writeValue').val() == 0) {   //Added on July 29th
 	        $('#writeModule').slideUp();
         }
-    },5000);
+    },4000);
 }
 
 $(document).ready(function(){
@@ -25,8 +25,8 @@ $(document).ready(function(){
     });
 
 	// Trying to target li's inside of itemUl to set an event to be tiggered when the li is clicked I want the styles on the span and p tags to change when the li is clicked.
-	$('.itemWrapper span').on('click', function(){
-        $(this).toggleClass('checkedOff checkedOn')
+	$('.itemWrapper').on('click', 'span:nth-child(1)', function(){
+        $(this).toggleClass('checkedOn')
             .siblings('p') //Targets siblings next to original target
             .toggleClass('listNeed listGot'); //Toggle Class either adds or removes class based on whether it exists on element
         console.log($(this)[0]); //Grabs HTML for target
@@ -76,6 +76,7 @@ $(document).ready(function(){
 		if(e.which == 13) {
 			$('#writeBtn').click();
 			e.preventDefault();
+			$('#writeValue').val("");
 		}
 	});
 
@@ -84,6 +85,11 @@ $(document).ready(function(){
 	// Delete button to remove list item
 	$('.itemWrapper').on('click', 'span.delete', function(){
 		$(this).parent().slideUp();
+	});
+
+	// Check item off
+	$('.itemUl').on('click', 'span.checkedOff', function(){
+		$(this).toggleClass('checkedOn checkedOff').closest('listNeed').addClass('listGot');
 	});
 	// List item will have to toggle from got to need state (on/off state) when the li is clicked but they should also be adding and removing an attribute to class the sorting
 
