@@ -3,7 +3,7 @@ var timeout; //Variable for timeout
 //Add timeout via function call
 function slideDownTimeout(){
     timeout = setTimeout(function(){
-        if($('#writeValue').val() == 0) {   //Added on July 29th
+        if($('#writeValue').val('')) {   //Added on July 29th
 	        $('#writeModule').slideUp();
         }
     },4000);
@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 	$('#writeModule').hide();
 	$('#addItemBtn').on('click', function() {
-		$('#writeModule').slideDown();
+		$('#writeModule').slideDown().focus();
         slideDownTimeout(); //Add timeout
 	});
 
@@ -26,9 +26,9 @@ $(document).ready(function(){
 
 	// Trying to target li's inside of itemUl to set an event to be tiggered when the li is clicked I want the styles on the span and p tags to change when the li is clicked.
 	$('.itemWrapper').on('click', 'span:nth-child(1)', function(){
-        $(this).toggleClass('checkedOn')
-            .siblings('p') //Targets siblings next to original target
-            .toggleClass('listNeed listGot'); //Toggle Class either adds or removes class based on whether it exists on element
+        $(this).toggleClass('checkedOff checkedOn').siblings('p').toggleClass('listNeed listGot');
+        //Targets siblings next to original target
+        //Toggle Class either adds or removes class based on whether it exists on element
         console.log($(this)[0]); //Grabs HTML for target
 	});
 
@@ -37,21 +37,26 @@ $(document).ready(function(){
 	var switchTrack = $('.switchTrack');
 	$('p.need').on('click', function(){
 		if($(switchBtn).hasClass('right')) {
-			$(this).removeClass('right').addClass('left');
+			$(switchBtn).removeClass('right').addClass('left');
 		} else {
-			$(this).addClass('left');
+			$(switchBtn).addClass('left');
 		}
 		//Would change to class and use toggle
-	})
+	});
 	$('p.got').on('click',function(){
 		if($(switchBtn).hasClass('left')) {
-			$(this).removeClass('left').addClass('right');
+			$(switchBtn).removeClass('left').addClass('right');
 		} else {
-			$(this).addClass('right');
+			$(switchBtn).addClass('right');
 		}
 	})
-    switchTrack.click(function(){ //Suggested functionality for switch button
-        switchBtn.toggleClass('clicked');
+    switchTrack.on('click', function(){ //Suggested functionality for switch button
+        if($(switchBtn).hasClass('left')) {
+        	$(switchBtn).removeClass('left').addClass('right');
+        }
+        if($(switchBtn).hasClass('right')) {
+        	$(switchBtn).removeClass('right').addClass('left');
+        }
     });
 
 

@@ -244,7 +244,13 @@ section#content_wrapper {
     background: url("../images/icons/icon-delete.png");
     background-size: 100%;
   }
-  /* line 180, ../../sass/partials/_small-up.scss */
+  /* line 182, ../../sass/partials/_small-up.scss */
+  div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOff,
+  div.allItemsWrapper div.itemWrapper ul.itemUl span.checkedOn,
+  div.allItemsWrapper div.itemWrapper ul.itemUl span.delete {
+    cursor: pointer;
+  }
+  /* line 185, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listBase, div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed, div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
     float: left;
     font-size: 1.25em;
@@ -255,29 +261,32 @@ section#content_wrapper {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /* line 190, ../../sass/partials/_small-up.scss */
+  /* line 195, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listNeed {
     color: white;
     text-shadow: 1px 1px 1px #05654f;
   }
-  /* line 195, ../../sass/partials/_small-up.scss */
+  /* line 200, ../../sass/partials/_small-up.scss */
   div.allItemsWrapper div.itemWrapper ul.itemUl p.listGot {
     color: #1b3b33;
     text-decoration: line-through;
   }
 
-  /* line 204, ../../sass/partials/_small-up.scss */
+  /* line 209, ../../sass/partials/_small-up.scss */
   .right {
     left: 49px;
+    transition: 0.5s ease-in-out;
   }
 
-  /* line 208, ../../sass/partials/_small-up.scss */
+  /* line 214, ../../sass/partials/_small-up.scss */
   .left {
     left: 0px;
+    transition: 0.5s ease-in-out;
   }
 
-  /* line 212, ../../sass/partials/_small-up.scss */
+  /* line 219, ../../sass/partials/_small-up.scss */
   .clicked {
     left: 49px;
+    transition: 0.5s ease-in-out;
   }
 }
