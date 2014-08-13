@@ -25,12 +25,11 @@ $(document).ready(function(){
     });
 
 	// Trying to target li's inside of itemUl to set an event to be tiggered when the li is clicked I want the styles on the span and p tags to change when the li is clicked.
-	$('.itemWrapper').on('click', 'span:nth-child(1)', function(){
-        $(this).toggleClass('checkedOff checkedOn').siblings('p').toggleClass('listNeed listGot');
-        //Targets siblings next to original target
-        //Toggle Class either adds or removes class based on whether it exists on element
-        console.log($(this)[0]); //Grabs HTML for target
-	});
+
+	//Targets siblings next to original target
+	//Toggle Class either adds or removes class based on whether it exists on element
+	//console.log($(this)[0]); //Grabs HTML for target
+	// });
 
 	// Toggle Switch functions
 	var switchBtn = $('.switchBtn');
@@ -38,35 +37,39 @@ $(document).ready(function(){
 	$('p.need').on('click', function(){
 		if($(switchBtn).hasClass('right')) {
 			$(switchBtn).removeClass('right').addClass('left');
-		} else {
-			$(switchBtn).addClass('left');
 		}
-		//Would change to class and use toggle
+		moveList();
 	});
 	$('p.got').on('click',function(){
 		if($(switchBtn).hasClass('left')) {
 			$(switchBtn).removeClass('left').addClass('right');
-		} else {
-			$(switchBtn).addClass('right');
 		}
+		moveList();
 	})
-    switchTrack.on('click', function(){ //Suggested functionality for switch button
-        if($(switchBtn).hasClass('left')) {
-        	$(switchBtn).removeClass('left').addClass('right');
-        }
-        if($(switchBtn).hasClass('right')) {
-        	$(switchBtn).removeClass('right').addClass('left');
-        }
+    switchTrack.on('click', function(){ //Suggested functionality
+        $(switchBtn).toggleClass('left right');
+        moveList();
     });
 
+    function moveList() {
+    	if($(switchBtn).hasClass('right')){
+    		// Need
+    		$('.itemWrapper').prepend($('#gotList'));
+    	} else {
+    		// Got
+    		$('.itemWrapper').prepend($('#needList'));
 
-	// When write button is clicked item is added to menu list
+    	}
+    }
+
+
+	// When write button is clicked item is added to need list
 	$('#writeBtn').on('click', function(e){
 		// Get value from input
 		var userInput = $('#writeValue').val();
 		e.preventDefault();
 		//Target List and add item
-		$('ul.itemUl').prepend(
+		$('ul#needList').prepend(
 				'<li>' +
 				'<span class="checkedOff"></span>' +
 				'<p class="listNeed">' + userInput + '</p>' +
@@ -93,8 +96,19 @@ $(document).ready(function(){
 	});
 
 	// Check item off
-	$('.itemUl').on('click', 'span.checkedOff', function(){
-		$(this).toggleClass('checkedOn checkedOff').closest('listNeed').addClass('listGot');
+	$('.itemUl').on('click', 'span:nth-child(1)', function(){
+		var ulNeed = $('#needList'),
+		// make these variables global
+			ulGot = $('#gotList');
+
+		$(this).toggleClass('checkedOn checkedOff').siblings('p').toggleClass('listGot listNeed');
+
+		if($(this).hasClass('checkedOn')) {
+			ulGot.append($(this).parent());
+		} else {
+			ulNeed.append($(this).parent());
+		}
+
 	});
 	// List item will have to toggle from got to need state (on/off state) when the li is clicked but they should also be adding and removing an attribute to class the sorting
 
